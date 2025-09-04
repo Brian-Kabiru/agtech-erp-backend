@@ -17,7 +17,7 @@ export class CropsService {
     userRole: Role,
     farmerId?: string,
   ) {
-    // If user is farmer, they can only create crops for themselves
+    // If user is farmer, they can only create crops for their personal selves
     if (userRole === Role.FARMER && farmerId) {
       createCropDto.farmerId = farmerId;
     }
